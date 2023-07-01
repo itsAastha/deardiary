@@ -5,7 +5,6 @@ import img2 from '../public/assets/img/loginpage.svg';
 import Image, { StaticImageData } from "next/image";
 
 import { useSession, signIn, signOut } from 'next-auth/react';
-;
 
 const Login = (): JSX.Element => {
   const { data:session } = useSession();
