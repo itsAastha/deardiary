@@ -247,7 +247,7 @@ export default function Diary() {
         </>
       );
     }
-    router.push("/login");
+    router.push("/");
     return null;
   }
 }

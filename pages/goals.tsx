@@ -24,7 +24,7 @@ export default function Goals() {
         </>
       )
     };
-    router.push('/login');
+    router.push('/');
   return null;
   }
   

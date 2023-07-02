@@ -30,7 +30,7 @@ function classNames(...classes) {
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
   { name: 'Settings', href: '/details' },
-  { name: 'Sign out', href: '#', onClick: () => signOut({callbackUrl:'http://localhost:3000/login'}) },
+  { name: 'Sign out', href: '#', onClick: () => signOut({callbackUrl:'http://localhost:3000/'}) },
 ]
 
 export default function Sidebar() {
@@ -243,7 +243,7 @@ export default function Sidebar() {
         </>
       )
     }
-    router.push('/login');
+    router.push('/');
     return null;
 }
 }

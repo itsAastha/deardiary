@@ -113,7 +113,7 @@ export default function Dashboard() {
         </>
       );
     }
-    router.push("/login");
+    router.push("/");
     return null;
   }
 }

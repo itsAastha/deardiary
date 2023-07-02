@@ -298,7 +298,7 @@ export default function Details() {
         </>
       )
     };
-    router.push('/login');
+    router.push('/');
   return null;
   }
   
