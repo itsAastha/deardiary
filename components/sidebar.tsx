@@ -19,7 +19,6 @@ import { useRouter } from 'next/router';
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: PresentationChartBarIcon, current: true },
   { name: 'Diary', href: '/diary', icon: PencilSquareIcon, current: false },
-  { name: 'Calendar', href: '/calendar', icon: CalendarIcon, current: false },
   { name: 'Goals', href: '/goals', icon: ClipboardDocumentCheckIcon, current: false },
   { name: 'My details', href: '/details', icon: UserIcon, current: false },
 ]
@@ -47,7 +46,7 @@ export default function Sidebar() {
         <>       
            <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
-          <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>
+          <Dialog as="div" className="relative z-40 lg:hidden" onClose={setSidebarOpen}>
             <Transition.Child
               as={Fragment}
               enter="transition-opacity ease-linear duration-300"
@@ -133,7 +132,7 @@ export default function Sidebar() {
         </Transition.Root>
 
         {/* Static sidebar for desktop */}
-        <div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
+        <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex min-h-0 flex-1 flex-col bg-gray-100">
             <div className="flex h-16 flex-shrink-0 items-center bg-white px-4">
@@ -168,11 +167,11 @@ export default function Sidebar() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:pl-64">
+        <div className="flex flex-col lg:pl-64">
           <div className="sticky top-0 z-10 flex h-16 flex-shrink-0 bg-white shadow">
             <button
               type="button"
-              className="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden"
+              className="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 lg:hidden"
               onClick={() => setSidebarOpen(true)}
             >
               <span className="sr-only">Open sidebar</span>
@@ -184,7 +183,7 @@ export default function Sidebar() {
                   Hello Luv, How was your day today?
                   </h1>
               </div>
-              <div className="ml-4 flex items-center md:ml-6">
+              <div className="ml-4 flex items-center lg:ml-6">
                 <button
                   type="button"
                   className="rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
