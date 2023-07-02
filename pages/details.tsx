@@ -3,7 +3,7 @@ import Layout from '@/components/layout';
 import Sidebar from '@/components/sidebar'
 import { useRouter } from 'next/router';
 
-export default function Dashboard() {
+export default function Details() {
   const { data: session, status } = useSession();
   const router = useRouter();
   {

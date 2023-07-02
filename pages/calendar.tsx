@@ -1,16 +1,16 @@
-import { useSession } from 'next-auth/react';
-import Layout from '@/components/layout';
+import { useSession, signIn, signOut } from 'next-auth/react';
+import { Fragment, useState } from 'react'
 import Sidebar from '@/components/sidebar'
 import { useRouter } from 'next/router';
+import Layout from '@/components/layout';
 
-export default function Dashboard() {
+export default function Calendar() {
   const { data: session, status } = useSession();
   const router = useRouter();
   {
     if (status === 'loading') {
       return <div>Loading...</div>;
     }
-    
     if (session){
       return (
         <>
@@ -21,9 +21,9 @@ export default function Dashboard() {
         </Layout>
         </>
       )
-    };
+    }
     router.push('/login');
-  return null;
+    return null;
   }
   
 }

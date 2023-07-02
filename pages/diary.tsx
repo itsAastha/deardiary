@@ -1,9 +1,9 @@
-import { useSession } from 'next-auth/react';
+import { useSession, signIn, signOut } from 'next-auth/react';
 import Layout from '@/components/layout';
 import Sidebar from '@/components/sidebar'
 import { useRouter } from 'next/router';
 
-export default function Dashboard() {
+export default function Diary() {
   const { data: session, status } = useSession();
   const router = useRouter();
   {
