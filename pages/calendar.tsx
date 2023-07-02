@@ -1,9 +1,10 @@
-import React from 'react'
-import Topbar from '@/components/topbar'
 import { useSession, signIn, signOut } from 'next-auth/react';
 import { Fragment, useState } from 'react'
 import { Dialog, Menu, Transition } from '@headlessui/react';
 import { useEffect } from 'react';
+import Topbar from '@/components/topbar';
+import Sidebar from '@/components/sidebar'
+
 import {
   Bars3BottomLeftIcon,
   UserIcon,
@@ -50,9 +51,13 @@ export default function Calendar() {
     
     if (session!=null){
       return (
-        <> <div>
+        <>
+        <div>
         <Topbar></Topbar>
-     </div></> )
+        <Sidebar></Sidebar>
+       </div>
+        </>
+      )
     }
   }
   

@@ -11,7 +11,7 @@ const Login = (): JSX.Element => {
   const { data:session } = useSession();
   const router = useRouter();
   if (session) {
-    router.push('/dashboard');
+    router.push('/diary');
     // return (
     //   <div className="bg-white">
     //     <div className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">

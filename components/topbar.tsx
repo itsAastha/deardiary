@@ -1,6 +1,8 @@
 import { useSession, signIn, signOut } from 'next-auth/react';
 import { Fragment, useState } from 'react'
 import { Dialog, Menu, Transition } from '@headlessui/react';
+import { useRouter } from 'next/router';
+
 import { useEffect } from 'react';
 import {
   Bars3BottomLeftIcon,
@@ -14,15 +16,8 @@ import {
 } from '@heroicons/react/24/outline'
 import logo from "../public/ddlogo.jpg";
 import Image, { StaticImageData } from "next/image";
-import { useRouter } from 'next/router';
 
-const navigation = [
-  { name: 'Dashboard', href: '#', icon: PresentationChartBarIcon, current: true },
-  { name: 'Diary', href: '#', icon: PencilSquareIcon, current: false },
-  { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Goals', href: '#', icon: ClipboardDocumentCheckIcon, current: false },
-  { name: 'My details', href: '#', icon: UserIcon, current: false },
-]
+
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
   { name: 'Settings', href: '#' },
@@ -38,7 +33,6 @@ export default function Topbar() {
   var session = useSession();
   session=session.data;
   const router = useRouter();
-
   {
     useEffect(() => {
       if (session==null){
@@ -115,20 +109,7 @@ export default function Topbar() {
             </Dialog>
           </Transition.Root>
   
-          {/* Static sidebar for desktop */}
-          <div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
-            {/* Sidebar component, swap this element with another sidebar if you like */}
-            <div className="flex min-h-0 flex-1 flex-col bg-gray-100">
-              <div className="flex h-16 flex-shrink-0 items-center bg-white px-4">
-              <Image
-                  src={logo}
-                  alt={""}
-                  className="w-20 rounded-lg transition"
-                />
-              </div>
-              
-            </div>
-          </div>
+       
           <div className="flex flex-col md:pl-64">
             <div className="sticky top-0 z-10 flex h-16 flex-shrink-0 bg-white shadow">
               <button
@@ -202,6 +183,6 @@ export default function Topbar() {
       )
     }
   }
-  
 }
+
   
