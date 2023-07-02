@@ -85,7 +85,7 @@ if (!session) {
                 <div className="flex w-full items-center justify-between md:w-auto">
                   <a href="#">
                     <span className="sr-only">Your Company</span>
-                    <Image
+                    <img
               src={Logo}
               alt={""}
               className="w-20 rounded-lg transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110  duration-300"
@@ -132,7 +132,7 @@ if (!session) {
               <div className="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5">
                 <div className="flex items-center justify-between px-5 pt-4">
                   <div>
-                    <Image
+                    <img
                       className="h-8 w-auto"
                       src="https://tailwindui.com/img/logos/mark.svg?from-color=teal&from-shade=500&to-color=cyan&to-shade=600&toShade=600"
                       alt=""
@@ -213,7 +213,7 @@ if (!session) {
                   <div className="mx-auto max-w-md px-6 sm:max-w-2xl lg:max-w-none lg:px-0">
                     {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   
-                    <Image
+                    <img
               src={Hero}
               alt={""}
               className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
@@ -237,7 +237,7 @@ if (!session) {
                 </p>
               </div>
               <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80">
-                <Image
+                <img
                   className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
                   src="https://tailwindui.com/img/component-images/green-project-app-screenshot.jpg"
                   alt=""
@@ -292,7 +292,7 @@ if (!session) {
           {/* CTA Section */}
           <div className="relative bg-gray-900">
             <div className="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-              <Image
+              <img
                 className="h-full w-full object-cover"
                 src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100"
                 alt=""
