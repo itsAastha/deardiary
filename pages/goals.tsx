@@ -16,7 +16,9 @@ export default function Goals() {
         <>
        <Layout>
             <div className='lg:ml-64'>
-                Holadddddddddddddddddddddddddddddddddddddd
+              <div className='p-5 '>
+              <p className='text-xl text-gray-700 font-sans'> Write your goals here, and we'll help you accomplish them! (coming soon!) </p>
+              </div>
             </div>
         </Layout>
         </>
