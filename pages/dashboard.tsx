@@ -66,7 +66,7 @@ export default function Dashboard() {
                     <div className="bg-white">
                       <div className="mx-auto grid  grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-10  lg:grid-cols-2 lg:px-4">
                         <div>
-                          <h2 className="text-2xl font-bold tracking-tight text-lime-500 ">
+                          <h2 className="text-2xl font-bold tracking-tight text-teal-500 ">
                             These are the most common emotions you've experienced lately.
                           </h2>
                           <p className="mt-4 text-gray-500">
