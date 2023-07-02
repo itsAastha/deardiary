@@ -1,23 +1,17 @@
 [
   {
     "email": "user1@example.com",
-    "name": "John Doe",
-    "created_at": "2023-06-30",
-    "preferences_good": ["Reading", "Traveling", "Hiking", "Listening to Music"],
-    "preferences_bad": ["Sleeping with Music On", "Eating Ice Cream", "Watching Movies", "Shopping"]
+    "name": "Kate Doe",
+    "created_at": "2023-06-30"
   },
   {
     "email": "user2@example.com",
     "name": "Jane Smith",
-    "created_at": "2023-06-29",
-    "preferences_good": ["Cooking", "Painting", "Photography", "Yoga"],
-    "preferences_bad": ["Being Alone", "Listening to Sad Songs", "Staying Indoors", "Eating Spicy Food"]
+    "created_at": "2023-06-29"
   },
   {
     "email": "user3@example.com",
     "name": "Alex Johnson",
-    "created_at": "2023-06-28",
-    "preferences_good": ["Singing", "Dancing", "Writing", "Gardening"],
-    "preferences_bad": ["Public Speaking", "Attending Social Gatherings", "Doing Taxes", "Waking up Early"]
+    "created_at": "2023-06-28"
   }
 ]
