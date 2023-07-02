@@ -94,7 +94,7 @@ export default function Sidebar() {
                   <Image
               src={logo}
               alt={""}
-              className="w-20 rounded-lg transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110  duration-300"
+              className="w-20  transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110  duration-300"
             />
                   </div>
                   <div className="mt-5 h-0 flex-1 overflow-y-auto">
@@ -139,7 +139,7 @@ export default function Sidebar() {
             <Image
               src={logo}
               alt={""}
-              className="w-20 rounded-lg"
+              className="w-20 "
             />
             </div>
             <div className="flex flex-1 flex-col overflow-y-auto">
@@ -184,13 +184,7 @@ export default function Sidebar() {
                   </h1>
               </div>
               <div className="ml-4 flex items-center lg:ml-6">
-                <button
-                  type="button"
-                  className="rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                >
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
