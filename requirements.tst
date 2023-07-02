@@ -1,0 +1,10 @@
+datetime
+pandas
+numpy
+IPython
+textblob
+nltk
+matplotlib
+wordcloud
+vaderSentiment
+transformers
