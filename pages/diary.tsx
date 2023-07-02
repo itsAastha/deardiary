@@ -2,6 +2,7 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import Layout from "@/components/layout";
 import Sidebar from "@/components/sidebar";
 import { useRouter } from "next/router";
+import axios from 'axios';
 import {
   ChatBubbleBottomCenterTextIcon,
   PaperClipIcon,
@@ -63,10 +64,37 @@ const days = [
   { date: "2022-02-05" },
   { date: "2022-02-06" },
 ];
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+
 export default function Diary() {
+
+  function classNames(...classes: (string | boolean | undefined)[]) {
+    return classes.filter(Boolean).join(" ");
+  }
+  const [formData, setFormData] = useState({
+    diary: ''
+  });
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+    
+    try {
+        const diary = formData.diary;
+        const email = session?.user?.email;
+        const date = new Date().toLocaleDateString();
+        var userurl = "https://flask-production-b246.up.railway.app/user?email="+email+"&date="+date+"&context="+diary;
+      const response = await axios.post(userurl);
+      // Handle the response from the API
+      console.log(response.data);
+    } catch (error) {
+      // Handle errors
+      console.error(error);
+    }
+  };
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
   const [open, setOpen] = useState(true);
   const { data: session, status } = useSession();
   const router = useRouter();
@@ -226,16 +254,19 @@ export default function Diary() {
                         Write about your day here
                       </p>
                       <div className="rounded-md border h-4/5 border-gray-300 px-3 py-2 shadow-sm">
-                        
-                        <textarea
-                          type="text"
-                          name="diary"
-                          id="diary"
-                          className="block w-full h-4/5 p-2  overflow-auto  text-gray-700 placeholder-gray-500 sm:text-l font-sans"
-                          placeholder="Dear diary,"
-                        />
-                      </div>
-                      <button className="flex mt-5  text-gray-600 font-semibold px-10 py-2 rounded-lg bg-teal-400 ">Save</button>
+  <form onSubmit={handleSubmit}>
+    <textarea
+     
+      name="diary"
+      id="diary"
+      value={formData.diary}
+      onChange={handleChange}
+      className="block w-full h-4/5 p-2 overflow-auto text-gray-700 placeholder-gray-500 sm:text-l font-sans"
+      placeholder="Dear diary,"
+    />
+    <button type="submit" className="flex mt-5 text-gray-600 font-semibold px-10 py-2 rounded-lg bg-teal-400">Save</button>
+  </form>
+</div>
 
                       
                     </div>

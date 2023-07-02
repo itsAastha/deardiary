@@ -23,7 +23,7 @@ const navigation = [
   { name: 'My details', href: '/details', icon: UserIcon, current: false },
 ]
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
@@ -180,7 +180,7 @@ export default function Sidebar() {
             <div className="flex flex-1 justify-between px-4">
               <div className="flex flex-1">
                 <h1 className='flex animate-typing overflow-hidden whitespace-nowrap items-center  text-xl text-gray-600 font-semibold'>
-                  Hello {session.user.name}, How was your day today?
+                  Hello {session?.user?.name}, How was your day today?
                   </h1>
               </div>
               <div className="ml-4 flex items-center lg:ml-6">
@@ -199,7 +199,7 @@ export default function Sidebar() {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src={session.user.image}
+                        src={""+session?.user?.image}
                         alt=""
                       />
                     </Menu.Button>

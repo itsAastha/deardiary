@@ -54,8 +54,8 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   async function fetchData() {
     try {
-      const name = session.user.name;
-      const email = session.user.email;
+      const name = session?.user?.name;
+      const email = session?.user?.email;
       const date = new Date().toLocaleDateString();
       var userurl = "https://flask-production-b246.up.railway.app/user?email="+email+"&date="+date+"&name="+name;
       const response = await axios.get(userurl);

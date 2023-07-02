@@ -12,7 +12,7 @@ const navigation = [
   { name: 'Schedule', href: '#', icon: SquaresPlusIcon, current: false },
 ]
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
@@ -127,8 +127,7 @@ export default function Details() {
                   <label htmlFor="street-address" className="block text-sm font-medium text-gray-700">
                     Are you a student?
                   </label>
-                  <select
-                    type="text"
+                   <select
                     name="street-address"
                     id="street-address"
                     autoComplete="street-address"
@@ -140,8 +139,7 @@ export default function Details() {
                   <label htmlFor="city" className="block text-sm font-medium text-gray-700">
                     number of siblings?
                   </label>
-                  <select
-                    type="text"
+                   <select
                     name="city"
                     id="city"
                     autoComplete="address-level2"
@@ -153,8 +151,7 @@ export default function Details() {
                   <label htmlFor="region" className="block text-sm font-medium text-gray-700">
                     What's your profession?
                   </label>
-                  <select
-                    type="text"
+                   <select
                     name="region"
                     id="region"
                     autoComplete="address-level1"
@@ -188,8 +185,7 @@ export default function Details() {
                   <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
                     what do you like to do when you are bored?
                   </label>
-                  <select
-                    type="text"
+                   <select
                     name="first-name"
                     id="first-name"
                     autoComplete="given-name"
@@ -201,8 +197,7 @@ export default function Details() {
                   <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
                   what do you like to do when you are happy?
                   </label>
-                  <select
-                    type="text"
+                   <select
                     name="last-name"
                     id="last-name"
                     autoComplete="family-name"
@@ -214,8 +209,7 @@ export default function Details() {
                   <label htmlFor="email-address" className="block text-sm font-medium text-gray-700">
                   what do you like to do when you are sad?
                   </label>
-                  <select
-                    type="text"
+                   <select
                     name="email-address"
                     id="email-address"
                     autoComplete="email"
@@ -241,8 +235,7 @@ export default function Details() {
                   <label htmlFor="street-address" className="block text-sm font-medium text-gray-700">
                     what kind of places do you hangout more often?
                   </label>
-                  <select
-                    type="text"
+                   <select
                     name="street-address"
                     id="street-address"
                     autoComplete="street-address"
@@ -254,8 +247,7 @@ export default function Details() {
                   <label htmlFor="city" className="block text-sm font-medium text-gray-700">
                    what do you do in your free time?
                   </label>
-                  <select
-                    type="text"
+                   <select
                     name="city"
                     id="city"
                     autoComplete="address-level2"
@@ -267,8 +259,7 @@ export default function Details() {
                   <label htmlFor="region" className="block text-sm font-medium text-gray-700">
                     what are your pet peeves?
                   </label>
-                  <select
-                    type="text"
+                   <select
                     name="region"
                     id="region"
                     autoComplete="address-level1"
