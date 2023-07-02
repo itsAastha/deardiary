@@ -29,7 +29,7 @@ function classNames(...classes) {
 
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
+  { name: 'Settings', href: '/details' },
   { name: 'Sign out', href: '#', onClick: () => signOut({callbackUrl:'http://localhost:3000/login'}) },
 ]
 
