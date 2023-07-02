@@ -12,7 +12,7 @@ import {
   CalendarIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import logo from "../public/ddlogo.jpg";
+import logo from "../public/ddlogo.png";
 import Image, { StaticImageData } from "next/image";
 import { useRouter } from 'next/router';
 

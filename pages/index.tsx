@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { ChevronRightIcon, StarIcon } from '@heroicons/react/20/solid'
 import Hero from "../public/hero.png"
-import Logo from "../public/ddlogo.jpg"
+import Logo from "../public/ddlogo.png"
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import React from 'react'
@@ -16,9 +16,10 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 const navigation = [
-  { name: 'About us', href: '#' },
-  { name: 'Our aim', href: '#' },
-  { name: 'Features', href: '#' },
+  { name: 'About us', href: '#about-us-section' },
+  { name: 'Features', href: '#featuers' },
+  { name: 'Our aim', href: '#our-aim' },
+  { name: 'Team', href: '#team' },
 ]
 const features = [
   {
@@ -185,6 +186,7 @@ if (!session) {
                   <div className="lg:py-24">
                     <a
                       href="#"
+                      onClick={() => signIn()}
                       className="inline-flex items-center rounded-full bg-black p-1 pr-2 text-white hover:text-gray-200 sm:text-base lg:text-sm xl:text-base"
                     >
                       <span className="rounded-full bg-gradient-to-r from-teal-500 to-cyan-600 px-3 py-0.5 text-sm font-semibold leading-5 text-white">
@@ -223,7 +225,7 @@ if (!session) {
           </div>
 
           {/* Feature section with screenshot */}
-          <div className="relative bg-gray-50 pt-16 sm:pt-24 lg:pt-32">
+          <div className="relative bg-gray-50 pt-16 sm:pt-24 lg:pt-32" id="about-us-section">
             <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
               <div>
                 <h2 className="text-lg font-semibold text-cyan-600">All in one AI powered digital journal</h2>
@@ -245,11 +247,11 @@ if (!session) {
           </div>
 
           {/* Feature section with grid */}
-          <div className="relative bg-white py-16 sm:py-24 lg:py-32">
+          <div className="relative bg-white py-16 sm:py-24 lg:py-32" id="featuers">
             <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
               <h2 className="text-lg font-semibold text-cyan-600">We'll make it possible.</h2>
               <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Everything you need to deploy your app
+              Comprehensive tool designed to support mental health.
               </p>
               <p className="mx-auto mt-5 max-w-prose text-xl text-gray-500">
               Embrace this journey and embark on a path to a more fulfilled and purposeful life.
@@ -275,6 +277,16 @@ if (!session) {
               </div>
             </div>
           </div>
+
+
+
+          {/*Team */} 
+          
+
+          
+          {/*Our Aim  */}
+
+          
 
        
           {/* CTA Section */}
