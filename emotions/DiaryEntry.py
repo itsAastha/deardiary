@@ -2,22 +2,26 @@
 from transformers import pipeline
 import pymongo
 
+
 class DearDiary:
     def __init__(self, user, entry, date):
         self.user = user
         self.date = date
         self.entry = entry
-        self.client = pymongo.MongoClient("mongodb://localhost:27017")
-        self.mydb = self.client["deardiary"]
+        self.client = pymongo.MongoClient(
+            "mongodb+srv://ayushganna67:9tRECDyPgD12ALSn@deardiary.dn8lmbn.mongodb.net/")
+        self.mydb = self.client["DearDiary"]
         self.entriesCol = self.mydb["entries"]
         if self.entriesCol.find({"created_at": self.date}):
-            self.entriesCol.delete_many({"created_at": self.date, "email": self.user})
+            self.entriesCol.delete_many(
+                {"created_at": self.date, "email": self.user})
 
         self.emotion = ""
         self.emotionDistribution = {}
 
     def emotion_polarity(self):
-        classifier = pipeline("text-classification", model="bhadresh-savani/distilbert-base-uncased-emotion", return_all_scores=True)
+        classifier = pipeline(
+            "text-classification", model="bhadresh-savani/distilbert-base-uncased-emotion", return_all_scores=True)
         predict = classifier(self.entry)
         score = {}
         for i in predict[0]:
@@ -31,9 +35,10 @@ class DearDiary:
         anger_curve = []
         anxiety_curve = []
         dates = []
-        entries = self.entriesCol.find({"email": self.user}, {"_id": 0, "created_on": 1, "emotion": 1, "emotion_distribution": 1})
+        entries = self.entriesCol.find({"email": self.user}, {
+                                       "_id": 0, "created_at": 1, "emotion": 1, "emotion_distribution": 1})
         for entry in entries:
-            dates.append(entry["created_on"])
+            dates.append(entry["created_at"])
             emotions.append(entry["emotion"])
             sad_score = 0
             happy_score = 0
@@ -73,9 +78,9 @@ class DearDiary:
         }
         self.entriesCol.insert_one(mydict)
 
+
 def main(email, content, date):
     journal = DearDiary(email, content, date)
     journal.insert_in_db()
-    sadness_curve, happiness_curve, anger_curve, anxiety_curve = journal.get_curves()
+    dates, emotion, sadness_curve, happiness_curve, anger_curve, anxiety_curve = journal.get_curves()
     return dates, emotion, sadness_curve, happiness_curve, anger_curve, anxiety_curve
-
