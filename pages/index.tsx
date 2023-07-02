@@ -85,7 +85,7 @@ if (!session) {
                 <div className="flex w-full items-center justify-between md:w-auto">
                   <a href="#">
                     <span className="sr-only">Your Company</span>
-                    <img
+                    <Image
               src={Logo}
               alt={""}
               className="w-20 rounded-lg transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110  duration-300"
@@ -213,7 +213,7 @@ if (!session) {
                   <div className="mx-auto max-w-md px-6 sm:max-w-2xl lg:max-w-none lg:px-0">
                     {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   
-                    <img
+                    <Image
               src={Hero}
               alt={""}
               className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
