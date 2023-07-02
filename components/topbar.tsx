@@ -30,20 +30,15 @@ function classNames(...classes) {
 
 export default function Topbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  var session = useSession();
-  session=session.data;
+  const { data: session, status } = useSession();
   const router = useRouter();
   {
-    useEffect(() => {
-      if (session==null){
-        router.push('/login');
-      }  
-    }, [session]);
-    
-    if (session!=null){
+    if (status === 'loading') {
+      return <div>Loading...</div>;
+    }
+    if (session){
       return (
         <>
-         
         <div>
           <Transition.Root show={sidebarOpen} as={Fragment}>
             <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>
@@ -182,6 +177,8 @@ export default function Topbar() {
       </> 
       )
     }
+    router.push('/login');
+    return null;
   }
 }
 

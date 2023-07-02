@@ -38,18 +38,14 @@ function classNames(...classes) {
 
 export default function Diary() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  var session = useSession();
-  session=session.data;
+  const { data: session, status } = useSession();
   const router = useRouter();
-
   {
-    useEffect(() => {
-      if (session==null){
-        router.push('/login');
-      }  
-    }, [session]);
+    if (status === 'loading') {
+      return <div>Loading...</div>;
+    }
     
-    if (session!=null){
+    if (session){
       return (
         <>
         <div>
@@ -58,7 +54,9 @@ export default function Diary() {
        </div>
         </>
       )
-    }
+    };
+    router.push('/login');
+  return null;
   }
   
 }

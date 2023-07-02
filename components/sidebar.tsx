@@ -17,9 +17,9 @@ import Image, { StaticImageData } from "next/image";
 import { useRouter } from 'next/router';
 
 const navigation = [
-  { name: 'Dashboard', href: '#', icon: PresentationChartBarIcon, current: true },
-  { name: 'Diary', href: '#', icon: PencilSquareIcon, current: false },
-  { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
+  { name: 'Dashboard', href: '/dashboard', icon: PresentationChartBarIcon, current: true },
+  { name: 'Diary', href: '/diary', icon: PencilSquareIcon, current: false },
+  { name: 'Calendar', href: '/calendar', icon: CalendarIcon, current: false },
   { name: 'Goals', href: '#', icon: ClipboardDocumentCheckIcon, current: false },
   { name: 'My details', href: '#', icon: UserIcon, current: false },
 ]
@@ -30,14 +30,15 @@ function classNames(...classes) {
 
 export default function Sidebar() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  var session = useSession();
-  session=session.data;
+  const { data: session, status } = useSession();
   const router = useRouter();
-
   {
+    if (status === 'loading') {
+      return <div>Loading...</div>;
+    }
+    if (session){
       return (
-        <>
-         
+        <>       
           <div>
             <Transition.Root show={sidebarOpen} as={Fragment}>
               <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>
@@ -178,4 +179,7 @@ export default function Sidebar() {
         </>
       )
     }
+    router.push('/login');
+    return null;
+}
 }
