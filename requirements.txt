@@ -1,4 +1,0 @@
-transformers
-pymongo
-Xformers
-flask
