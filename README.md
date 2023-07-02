@@ -33,6 +33,9 @@ transformers, pymongo, Xformers, flask, gunicorn
 ## Links 🖱️
 - Frontend - 
 - Backend API - https://flask-production-b246.up.railway.app/
+- GitHub 
+     - Frontend - https://github.com/ayushjain01/deardiarybackend/
+     - Backend - https://github.com/itsAastha/deardiary
 
 ## Getting Started ⚙️
 
