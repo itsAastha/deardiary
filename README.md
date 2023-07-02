@@ -1,6 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dear Diary 📔
+Welcome to Dear Diary, an AI-powered journaling tool designed to nurture your emotional well-being and support personal growth. 🌟
 
-## Getting Started
+## Problem Statement 🎯
+Understanding and managing emotions can be complex, and many individuals struggle with self-reflection and maintaining a positive mindset. It can be challenging to track emotional patterns, identify triggers, and gain insights into one's own emotional well-being. 😔
+
+## Solution 💡
+Dear Diary addresses these challenges by providing an intuitive and powerful platform for journaling and emotional analysis. Leveraging advanced AI algorithms, Dear Diary allows users to express themselves, track their emotions, and gain valuable insights. 🚀
+
+## Key Features 🔑
+- Journaling ✍️: Create daily entries to record your thoughts, experiences, and emotions.
+- Emotion Analysis 📈: Our AI-powered algorithms analyze your journal entries to detect and understand your emotions.
+- Emotion Analytics 📊: Gain insights into your emotional patterns and trends over time through visualizations and analytics.
+- Goal Planner (Coming Soon) 🎯: Set goals, break them down into actionable steps, and track your progress towards personal growth.
+- Recommendations (Coming Soon) 🔍: Receive personalized recommendations based on your journal entries and emotional analysis.
+- Companion Chatbot (Coming Soon) 💬: Engage in interactive conversations and receive support from a friendly chatbot.
+
+## Future Scope 🔮
+The future of Dear Diary holds exciting possibilities for growth and expansion. Here are some potential areas of development:
+- Enhanced Recommendation System 📚: We plan to further improve our recommendation system by leveraging machine learning algorithms and user feedback. This will provide even more personalized and relevant suggestions for improving well-being and achieving goals.
+- Integration of Wearable Devices ⌚: By integrating with wearable devices that track vital signs and emotional indicators, Dear Diary can provide a more holistic view of the user's emotional well-being, offering deeper insights and personalized recommendations.
+- Image and Media Support 📷: We are working towards allowing users to add images and multimedia content to their journal entries, enriching the journaling experience and enabling users to capture moments visually.
+
+## Tech Stack 💻
+
+### Frontend 
+Next.js, TypeScript, tailwindcss, NextAuth.js
+### Backend 
+Python, MongoDB
+### Python Modules
+transformers, pymongo, Xformers, flask, gunicorn
+
+## Links 🖱️
+- Frontend - 
+- Backend API - https://flask-production-b246.up.railway.app/
+
+## Getting Started ⚙️
 
 First, run the development server:
 
@@ -13,26 +47,3 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
