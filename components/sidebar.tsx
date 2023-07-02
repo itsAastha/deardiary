@@ -105,7 +105,7 @@ export default function Sidebar() {
                           href={item.href}
                           className={classNames(
                             item.current
-                              ? 'bg-lime-400 text-white'
+                              ? 'bg-teal-400 text-white'
                               : 'text-gray-500 hover:bg-gray-400 hover:text-white',
                             'group flex items-center px-2 py-2 text-base font-medium rounded-md'
                           )}
@@ -149,7 +149,7 @@ export default function Sidebar() {
                     key={item.name}
                     href={item.href}
                     className={classNames(
-                      item.current ? 'bg-lime-400 text-white' : 'text-gray-500 hover:bg-gray-300 hover:text-gray-500',
+                      item.current ? 'bg-teal-400 text-white' : 'text-gray-500 hover:bg-gray-300 hover:text-gray-500',
                       'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
                     )}
                   >

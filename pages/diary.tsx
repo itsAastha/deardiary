@@ -91,7 +91,7 @@ export default function Diary() {
                         <div className="flex items-center">
                           <button
                             type="button"
-                            className="-m-1.5 flex flex-none items-center justify-center p-1.5 text-lime-600 hover:text-gray-500"
+                            className="-m-1.5 flex flex-none items-center justify-center p-1.5 text-teal-600 hover:text-gray-500"
                           >
                             <span className="sr-only">Previous month</span>
                             <ChevronLeftIcon
@@ -102,7 +102,7 @@ export default function Diary() {
                           <div className="flex-auto font-semibold font-sans text-gray-600">July</div>
                           <button
                             type="button"
-                            className="-m-1.5 flex flex-none items-center justify-center p-1.5 text-lime-600 hover:text-gray-500"
+                            className="-m-1.5 flex flex-none items-center justify-center p-1.5 text-teal-600 hover:text-gray-500"
                           >
                             <span className="sr-only">Next month</span>
                             <ChevronRightIcon
@@ -181,7 +181,7 @@ export default function Diary() {
                           <span className="isolate inline-flex -space-x-px rounded-md shadow-sm">
                             <button
                               type="button"
-                              className="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-lime-600 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                              className="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-teal-600 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
                             >
                               <span className="sr-only">Edit</span>
                               <PencilIcon
@@ -191,7 +191,7 @@ export default function Diary() {
                             </button>
                             <button
                               type="button"
-                              className="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-lime-600 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                              className="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-teal-600 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
                             >
                               <span className="sr-only">Attachment</span>
                               <PaperClipIcon
@@ -201,7 +201,7 @@ export default function Diary() {
                             </button>
                             <button
                               type="button"
-                              className="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-lime-600 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                              className="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-teal-600 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
                             >
                               <span className="sr-only">Annotate</span>
                               <ChatBubbleBottomCenterTextIcon
@@ -211,7 +211,7 @@ export default function Diary() {
                             </button>
                             <button
                               type="button"
-                              className="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-lime-600 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                              className="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-teal-600 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
                             >
                               <span className="sr-only">Delete</span>
                               <TrashIcon
@@ -235,7 +235,7 @@ export default function Diary() {
                           placeholder="Dear diary,"
                         />
                       </div>
-                      <button className="flex mt-5  text-gray-600 font-semibold px-10 py-2 rounded-lg bg-lime-400 ">Save</button>
+                      <button className="flex mt-5  text-gray-600 font-semibold px-10 py-2 rounded-lg bg-teal-400 ">Save</button>
 
                       
                     </div>

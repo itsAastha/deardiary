@@ -38,7 +38,7 @@ export default function Details() {
               href={item.href}
               className={classNames(
                 item.current
-                  ? 'bg-lime-300 text-gray-600 hover:text-lime-700 hover:bg-white'
+                  ? 'bg-teal-300 text-gray-600 hover:text-teal-700 hover:bg-white'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50',
                 'group rounded-md px-3 py-2 flex items-center text-sm font-medium'
               )}
@@ -47,7 +47,7 @@ export default function Details() {
               <item.icon
                 className={classNames(
                   item.current
-                    ? 'text-gray-600 group-hover:text-lime-500'
+                    ? 'text-gray-600 group-hover:text-teal-500'
                     : 'text-gray-400 group-hover:text-gray-500',
                   'flex-shrink-0 -ml-1 mr-3 h-6 w-6'
                 )}
@@ -168,7 +168,7 @@ export default function Details() {
             <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
               <button
                 type="submit"
-                className="inline-flex justify-center rounded-md border border-transparent bg-lime-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-lime-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="inline-flex justify-center rounded-md border border-transparent bg-teal-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 Save
               </button>
@@ -282,7 +282,7 @@ export default function Details() {
             <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
               <button
                 type="submit"
-                className="inline-flex justify-center rounded-md border border-transparent bg-lime-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-lime-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="inline-flex justify-center rounded-md border border-transparent bg-teal-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 Save
               </button>
