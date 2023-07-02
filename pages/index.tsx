@@ -132,7 +132,7 @@ if (!session) {
               <div className="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5">
                 <div className="flex items-center justify-between px-5 pt-4">
                   <div>
-                    <img
+                    <image
                       className="h-8 w-auto"
                       src="https://tailwindui.com/img/logos/mark.svg?from-color=teal&from-shade=500&to-color=cyan&to-shade=600&toShade=600"
                       alt=""
@@ -237,7 +237,7 @@ if (!session) {
                 </p>
               </div>
               <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80">
-                <img
+                <image
                   className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
                   src="https://tailwindui.com/img/component-images/green-project-app-screenshot.jpg"
                   alt=""
@@ -292,7 +292,7 @@ if (!session) {
           {/* CTA Section */}
           <div className="relative bg-gray-900">
             <div className="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-              <img
+              <image
                 className="h-full w-full object-cover"
                 src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100"
                 alt=""
