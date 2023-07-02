@@ -30,7 +30,7 @@ function classNames(...classes) {
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
   { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' },
+  { name: 'Sign out', href: '#', onClick: () => signOut({callbackUrl:'http://localhost:3000/login'}) },
 ]
 
 export default function Sidebar() {
@@ -180,7 +180,7 @@ export default function Sidebar() {
             <div className="flex flex-1 justify-between px-4">
               <div className="flex flex-1">
                 <h1 className='flex animate-typing overflow-hidden whitespace-nowrap items-center  text-xl text-gray-600 font-semibold'>
-                  Hello Luv, How was your day today?
+                  Hello {session.user.name}, How was your day today?
                   </h1>
               </div>
               <div className="ml-4 flex items-center lg:ml-6">
@@ -199,7 +199,7 @@ export default function Sidebar() {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        src={session.user.image}
                         alt=""
                       />
                     </Menu.Button>
@@ -219,6 +219,7 @@ export default function Sidebar() {
                           {({ active }) => (
                             <a
                               href={item.href}
+                              onClick={item.onClick}
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
                                 'block px-4 py-2 text-sm text-gray-700'
