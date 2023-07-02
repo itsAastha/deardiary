@@ -91,7 +91,7 @@ export default function Sidebar() {
                     </div>
                   </Transition.Child>
                   <div className="flex flex-shrink-0 items-center px-4">
-                  <Image
+                  <image
               src={logo}
               alt={""}
               className="w-20  transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110  duration-300"
@@ -136,7 +136,7 @@ export default function Sidebar() {
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex min-h-0 flex-1 flex-col bg-gray-100">
             <div className="flex h-16 flex-shrink-0 items-center bg-white px-4">
-            <Image
+            <image
               src={logo}
               alt={""}
               className="w-20 "
@@ -191,7 +191,7 @@ export default function Sidebar() {
                   <div>
                     <Menu.Button className="flex max-w-xs items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                       <span className="sr-only">Open user menu</span>
-                      <Image
+                      <img
                         className="h-8 w-8 rounded-full"
                         src={""+session?.user?.image}
                         alt=""
