@@ -11,7 +11,7 @@ const Login = (): JSX.Element => {
   const { data:session } = useSession();
   const router = useRouter();
   if (session) {
-    router.push('/diary');
+    router.push('/dashboard');
   } 
   else {
     return (

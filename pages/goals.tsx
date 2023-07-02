@@ -3,7 +3,7 @@ import Layout from '@/components/layout';
 import Sidebar from '@/components/sidebar'
 import { useRouter } from 'next/router';
 
-export default function Dashboard() {
+export default function Goals() {
   const { data: session, status } = useSession();
   const router = useRouter();
   {
@@ -14,7 +14,7 @@ export default function Dashboard() {
     if (session){
       return (
         <>
-        <Layout>
+       <Layout>
             <div className='lg:ml-64'>
                 Holadddddddddddddddddddddddddddddddddddddd
             </div>
