@@ -8,3 +8,5 @@ matplotlib
 wordcloud
 vaderSentiment
 transformers
+pymongo
+Xformers

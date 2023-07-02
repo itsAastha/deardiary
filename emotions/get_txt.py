@@ -5,12 +5,11 @@ import dateutil.parser as parser
 
 def fetch(file_name: str) -> dict[str, str]:
     """Fetch function that returns dict with formatted dictionary."""
-    file_dir = "./Diary_uploads/" + file_name
+    file_dir = r"emotions/Diary_uploads/" + file_name
     with open(file_dir, 'r', encoding="utf-8") as file:
         text = file.read()
     with open(file_dir, 'r', encoding="utf-8") as file:
         first_line = file.readline()
-
 
     # IF first line is a date return date and text, if not, error, pass.
     try:
